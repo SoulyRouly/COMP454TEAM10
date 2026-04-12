@@ -1,32 +1,28 @@
 using UnityEngine;
 
-public class PlayerInteraction : MonoBehaviour
+public class BartenderInteraction : MonoBehaviour
 {
-    public float interactionDistance = 5f;
-    public Animator bartenderAnimator;
+    private Animator animator;
+    private AudioSource audioSource;
+    public AudioClip[] voiceLines; // drag multiple clips in here
 
-    void Update()
+    void Start()
     {
-        // Check for Left Mouse Click
-        if (Input.GetMouseButtonDown(0))
-        {
-            // Create a ray from the center of the screen
-            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            RaycastHit hit;
+        animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+    }
 
-            if (Physics.Raycast(ray, out hit, interactionDistance))
-            {
-                // If we hit the Bartender
-                if (hit.collider.CompareTag("NPC"))
-                {
-                    bartenderAnimator.SetTrigger("Wave");
-                }
-                // If we hit the Bottle
-                else if (hit.collider.CompareTag("Bottle"))
-                {
-                    bartenderAnimator.SetTrigger("Prepare");
-                }
-            }
-        }
+    void OnMouseDown()
+    {
+        animator.SetTrigger("Wave");
+        PlayRandomVoiceLine();
+    }
+
+    void PlayRandomVoiceLine()
+    {
+        if (voiceLines.Length == 0) return;
+
+        int randomIndex = Random.Range(0, voiceLines.Length);
+        audioSource.PlayOneShot(voiceLines[randomIndex]);
     }
 }
