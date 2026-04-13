@@ -8288,7 +8288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   controller: {fileID: 1213600660}
   animator: {fileID: 1158067227}
-  speed: 5
+  speed: 7
   gravity: -9.81
 --- !u!143 &1213600660
 CharacterController:
