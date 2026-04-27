@@ -3980,6 +3980,7 @@ MonoBehaviour:
   m_Script: {fileID: 1457677241}
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.HighDefinition.Runtime::UnityEngine.Rendering.HighDefinition.SceneObjectIDMapSceneAsset
+  m_Entries: []
 --- !u!4 &369235668
 Transform:
   m_ObjectHideFlags: 19
@@ -5184,6 +5185,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &434049595 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: b45a21a3a6e8dba4894cc9e3aff0bf64, type: 3}
+  m_PrefabInstance: {fileID: 1678422228}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &438073315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7004,6 +7010,7 @@ MonoBehaviour:
   m_Script: {fileID: 1112361565}
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.HighDefinition.Runtime::UnityEngine.Rendering.HighDefinition.SceneObjectIDMapSceneAsset
+  m_Entries: []
 --- !u!4 &622021291
 Transform:
   m_ObjectHideFlags: 19
@@ -18269,6 +18276,7 @@ GameObject:
   - component: {fileID: 1656536925}
   - component: {fileID: 1656536924}
   - component: {fileID: 1656536923}
+  - component: {fileID: 1656536926}
   m_Layer: 0
   m_Name: WineBottleSmall_014 (6)
   m_TagString: Bottle
@@ -18370,6 +18378,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656536921}
   m_Mesh: {fileID: 4300028, guid: 8f012fe7536589e4697113c226f5ec0f, type: 3}
+--- !u!114 &1656536926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656536921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c91598f81984aeb8d6ba4938ec45c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BottleClick
+  npcAnimator: {fileID: 434049595}
 --- !u!1 &1670000455 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eb485278f66a1413e8624e6d84ef4ecd, type: 3}
